@@ -1,5 +1,8 @@
 import tkinter as tk
 import mysql.connector
+import root
+
+
 def push_number():
     # Получение значения из текстового поля
     number_to_check = entry.get()
@@ -7,10 +10,10 @@ def push_number():
     # Подключение к базе данных
     try:
         conn = mysql.connector.connect(
-            host="158.160.152.77",
-            user="vitas",
-            password="Izl_2245739",
-            database="testrfid"
+            host=root.host,
+            user=root.user,
+            password=root.password,
+            database=root.database
         )
 
     except mysql.connector.Error as e:
@@ -23,10 +26,10 @@ def takedata():
     # Подключение к базе данных
     try:
         conn = mysql.connector.connect(
-            host="158.160.152.77",
-            user="vitas",
-            password="Izl_2245739",
-            database="testrfid"
+            host=root.host,
+            user=root.user,
+            password=root.password,
+            database=root.database
         )
 
     except mysql.connector.Error as e:
@@ -47,10 +50,10 @@ def check_number():
     # Подключение к базе данных
     try:
         conn = mysql.connector.connect(
-            host="158.160.152.77",
-            user="vitas",
-            password="Izl_2245739",
-            database="testrfid"
+            host=root.host,
+            user=root.user,
+            password=root.password,
+            database=root.database
 
         )
         cursor = conn.cursor()
