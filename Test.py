@@ -2,7 +2,8 @@ import tkinter as tk
 import mysql.connector
 import root
 
-
+def testfunction():
+    pass
 def push_number():
     # Получение значения из текстового поля
     number_to_check = entry.get()
